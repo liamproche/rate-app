@@ -18,8 +18,8 @@ MODELS:
     -Timestamp - cannot edit
 
 -THING
-    -Thing name
-    -Poster comment on thing (this should be brief)
+    -Thing title
+    -User comment on thing
     -Photo url
     -UserId
     -Comments = array of commentIds
@@ -60,10 +60,22 @@ USER STORIES
         -When the thing was created
         -Username that created the thing (this should stay even if a user deletes their account)
         -Time that thing was created
-        -Add comment field (at the top)
+        -If user logged in - Add comment (pinned to top of accordion)
         -List of all the comments on the thing
 -User should have to create an account to comment
--Log-in- When user logs in they should be taken back to the homepage except login/create account nav changed to My Things, Things I've Rated, Account Settings
+-Log-in 
+    -When user logs in they should be taken back to the homepage changes:
+        -Nav - Login/Create Account changed to:
+            -My Things
+            -Things I've rated
+            -Account Settings
+        -Create A Thing Button on bottom of page (Bootstrap, Primary)
+            -Pop-up Modal to create thing
+                -Thing Name
+                -Picture
+                    -Upload for desktop
+                    -Take picture option?...If mobile?
+                    -Checkbox to upload item anon
 -If a user clicks on "My Things" they should be taken to a show page with things they have posted with the option of clicking on a post to see individual thing detail page
     -Should user have option to rate own item? <--Yes. I think so, with option to update the rating later
 -If a user clicks on "Things I've Rated" they should be taken to a show page with the things they've rated. The items control panel should show an option to "display my ratings" which should be a dropdown with "Your Ratings: UpRates: Number and DownRates: Number"
@@ -76,11 +88,11 @@ USER STORIES
         -If yes, there should be a things I've posted link which takes user to "My things" show page with option to delete and popup modal confirming delete of thing
     -Delete Account Button with pop-up modal confirming delete... (Maybe 2 pop-up modals, the second one being really cheesey and tongue-in-cheek)
         -When user deletes account, do items get deleted?... (I think not)
-        -Deleting account really deletes account, items stay
-    
-
-
-
+        -Deleting account
+            -Deletes user account from db
+            -Logs user out
+            -Routes user to landing page
+        -If user not logged in when rating an item defaults to anon
 
 
 
