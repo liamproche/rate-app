@@ -56,9 +56,13 @@ USER STORIES
     -Option to uprate ("Orville" button)
     -Current Rating 
     -Option to downrate ("Orville" button)
-    -Option to view comments (Comments appear as drop-down menu)
--There should also be an option to view comments which should take users to an individual thing component with comments listed
-    -User should have to create an account to comment
+-   -Details Icon which opens accordian showing:
+        -When the thing was created
+        -Username that created the thing (this should stay even if a user deletes their account)
+        -Time that thing was created
+        -Add comment field (at the top)
+        -List of all the comments on the thing
+-User should have to create an account to comment
 -Log-in- When user logs in they should be taken back to the homepage except login/create account nav changed to My Things, Things I've Rated, Account Settings
 -If a user clicks on "My Things" they should be taken to a show page with things they have posted with the option of clicking on a post to see individual thing detail page
     -Should user have option to rate own item? <--Yes. I think so, with option to update the rating later
@@ -72,6 +76,8 @@ USER STORIES
         -If yes, there should be a things I've posted link which takes user to "My things" show page with option to delete and popup modal confirming delete of thing
     -Delete Account Button with pop-up modal confirming delete... (Maybe 2 pop-up modals, the second one being really cheesey and tongue-in-cheek)
         -When user deletes account, do items get deleted?... (I think not)
+        -Deleting account really deletes account, items stay
+    
 
 
 
