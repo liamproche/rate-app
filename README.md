@@ -1,9 +1,9 @@
 # rate-app
 NAME
 -Rate Anything?
+-Rate Things?
 
 CONCEPT- Rate Anything App 
-
 
 TECHNOLOGIES- Full-Stack Application, Postgre, Express.js, React, React Bootstrap (PERN Stack!)
 
@@ -11,29 +11,31 @@ MODELS:
 -USER
     -username(unique) - cannot edit
     -name(display) - can edit
+    -email - can edit
     -password - can edit
     -thingsPosted = array of thingIds
     -thingsRated = array of thingIds
-    -timestamp - cannot edit
+    -Timestamp - cannot edit
 
 -THING
-    -Photo url
     -Thing name
     -Poster comment on thing (this should be brief)
-    -User that created it
+    -Photo url
+    -UserId
+    -Comments = array of commentIds
+    -Rating (default 0, can go negative), aggregate of all ratings on thing
     -Timestamp
-    -Comments = array of comments ids
-    -Rating (default 0, can go negative)
 
 -RATING
     -Number
     -UserId
     -ThingId
+    -Timestamp
 
 -COMMENT
     -Body
-    -User that created it
-    -Thing it belongs to
+    -UserId
+    -ThingId
     -Timestamp
 
 USER STORIES
@@ -44,22 +46,32 @@ USER STORIES
         -Sort By (Upper-left dropdown menu)
     -Section displaying a random assortment of items from the db. These should be paginated.
         -Page numbers at the bottom (page x of y, option to jump pages)
-    -User should be able to filter items displayed by:
-        -Popular
+    -User should be able to filter items displayed by
+        -Popular (Most rated)
         -Highest Rated
         -Lowest Rated
         -Recently rated?
         -Not recently rated?
--The items should look like little boxes in a grid formation with the item photo, name, brief description and current rating displayed
--There should be up and down arrows on either side of rating where the user can adjust the rating (These should look exactly like the upvote/downvote arrows from that episode of "The Orville")
-    -When the user clicks the up arrow the rating should increase by one on the page and in the db
-    -When the user clicks the down arrow the rating should decrease by one on the page and in the db
+-The items should look like little boxes in a grid formation with the item photo, name and control panel with:
+    -Option to uprate ("Orville" button)
+    -Current Rating 
+    -Option to downrate ("Orville" button)
+    -Option to view comments (Comments appear as drop-down menu)
 -There should also be an option to view comments which should take users to an individual thing component with comments listed
     -User should have to create an account to comment
 -Log-in- When user logs in they should be taken back to the homepage except login/create account nav changed to My Things, Things I've Rated, Account Settings
 -If a user clicks on "My Things" they should be taken to a show page with things they have posted with the option of clicking on a post to see individual thing detail page
     -Should user have option to rate own item? <--Yes. I think so, with option to update the rating later
--If a user clicks on "Things I've Rated" they should be taken to a show page with the things they've rated. The items should include the user's rating of the item with an option to edit the rating
+-If a user clicks on "Things I've Rated" they should be taken to a show page with the things they've rated. The items control panel should show an option to "display my ratings" which should be a dropdown with "Your Ratings: UpRates: Number and DownRates: Number"
+    -Options to uprate and downrate should still be enabled (user can rate a thing as many times as they want)
+-If user clicks on edit account it should take them to an account edit page (or should this be a modal) where they can edit:
+    -name (NOT username)
+    -password
+    -email
+    -Should a user have the option to delete things they have created? If not, warning message before posting?
+        -If yes, there should be a things I've posted link which takes user to "My things" show page with option to delete and popup modal confirming delete of thing
+    -Delete Account Button with pop-up modal confirming delete... (Maybe 2 pop-up modals, the second one being really cheesey and tongue-in-cheek)
+        -When user deletes account, do items get deleted?... (I think not)
 
 
 
