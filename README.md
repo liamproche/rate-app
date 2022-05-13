@@ -1,7 +1,6 @@
 # rate-app
 NAME
--Rate Anything?
--Rate Things?
+-Rate Things
 
 CONCEPT- Rate Anything App 
 
@@ -97,7 +96,6 @@ USER STORIES
             -Logs user out
             -Routes user to landing page
         -If user not logged in when rating an item defaults to anon for user
-    
 
 
 
