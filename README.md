@@ -5,7 +5,7 @@ NAME
 
 CONCEPT- Rate Anything App 
 
-TECHNOLOGIES- Full-Stack Application, Postgre, Express.js, React, React Bootstrap (PERN Stack!)
+TECHNOLOGIES- Full-Stack Application, PostgreSQL, Express.js, React, React Bootstrap (PERN Stack!)
 
 MODELS:
 -USER
@@ -76,6 +76,9 @@ USER STORIES
                     -Upload for desktop
                     -Take picture option?...If mobile?
                     -Checkbox to upload item anon
+        -When a user creates a thing:
+            -Thing added to db
+            -User routed back to homepage
 -If a user clicks on "My Things" they should be taken to a show page with things they have posted with the option of clicking on a post to see individual thing detail page
     -Should user have option to rate own item? <--Yes. I think so, with option to update the rating later
 -If a user clicks on "Things I've Rated" they should be taken to a show page with the things they've rated. The items control panel should show an option to "display my ratings" which should be a dropdown with "Your Ratings: UpRates: Number and DownRates: Number"
@@ -83,6 +86,7 @@ USER STORIES
 -If user clicks on edit account it should take them to an account edit page (or should this be a modal) where they can edit:
     -name (NOT username)
     -password
+    -confirm change password field
     -email
     -Should a user have the option to delete things they have created? If not, warning message before posting?
         -If yes, there should be a things I've posted link which takes user to "My things" show page with option to delete and popup modal confirming delete of thing
@@ -92,7 +96,8 @@ USER STORIES
             -Deletes user account from db
             -Logs user out
             -Routes user to landing page
-        -If user not logged in when rating an item defaults to anon
+        -If user not logged in when rating an item defaults to anon for user
+    
 
 
 
