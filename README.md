@@ -98,6 +98,10 @@ USER STORIES
         -If user not logged in when rating an item defaults to anon for user
 
 
+ADDITIONAL GOALS
+-Forgot password feature to send them an email to reset
+-Clicking on username for created thing takes to user show page showing things they have created and things they have rated
+
 
 FEATURES
 -Photo Upload (Cloudinary)
