@@ -18,7 +18,7 @@ MODELS:
 
 -THING
     -Thing title
-    -User comment on thing
+    -Description
     -Photo url
     -UserId
     -Comments = array of commentIds
